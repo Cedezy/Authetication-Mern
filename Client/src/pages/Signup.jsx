@@ -33,6 +33,7 @@ const Signup = () => {
             const response = await axios.post("/auth/signup", form, { 
                 withCredentials: true 
             });
+            console.log("Signup response:", response);
             setMessage(response.data.message);
             setOtpSent(true);
         } 
